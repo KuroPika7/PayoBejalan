@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FloatingActionButton fabTambah;
     private RecyclerView rvdestinasi;
+    private MyDatabaseHelper myDB;
 
 
     @Override
@@ -30,5 +32,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        myDB = new MyDatabaseHelper(MainActivity.this);
+    }
+
+    private void SQLiteToArrayList(){
+
+    }
+    private void tampilDestinasi(){
+
     }
 }
