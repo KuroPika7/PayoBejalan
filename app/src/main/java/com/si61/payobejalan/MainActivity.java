@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabTambah;
     private RecyclerView rvdestinasi;
     private MyDatabaseHelper myDB;
-    private ArrayList<String> arrName, arrAlamat, arrJam;
+    private ArrayList<String> arrId, arrName, arrAlamat, arrJam;
     private AdapterDestinasi adDestinasi;
 
 
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             while (varCursor.moveToNext()){
+                arrId.add(varCursor.getString(0));
                 arrName.add(varCursor.getString(1));
                 arrAlamat.add(varCursor.getString(2));
                 arrJam.add(varCursor.getString(3));
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void tampilDestinasi(){
+        arrId = new ArrayList<>();
         arrName = new ArrayList<>();
         arrAlamat = new ArrayList<>();
         arrJam = new ArrayList<>();
